@@ -36,7 +36,43 @@
     <li>Cook for 5 minutes and serve hot.</li>
   </ol>
 
+  <h1 id="recipeTitle"></h1>
+
+<hr>
+
+<h3 class="mt-4">🎥 Recipe Video</h3>
+
+<div class="embed-responsive embed-responsive-16by9 my-3">
+  <iframe 
+    id="youtubeFrame"
+    class="embed-responsive-item"
+    allowfullscreen>
+  </iframe>
 </div>
+
+</div>
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+
+  const title = params.get("title");
+  const video = params.get("video");
+
+  if (title) {
+    document.getElementById("recipeTitle").innerText = title;
+  }
+
+  if (video) {
+    document.getElementById("youtubeFrame").src =
+      "https://www.youtube.com/embed/" + video;
+  }
+</script>
+<script>
+  if (!video) {
+    document.querySelector(".embed-responsive").style.display = "none";
+  }
+</script>
 
 </body>
 </html>
