@@ -11,6 +11,7 @@ body {
 .recipe-card {
   margin-bottom: 30px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  text-align: center;
 }
 
 .recipe-card img {
@@ -20,4 +21,3 @@ body {
   object-fit: cover;
   margin: auto;
 }
-
