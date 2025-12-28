@@ -14,6 +14,10 @@ body {
 }
 
 .recipe-card img {
-  height: 220px;
+  width: 100%;
+  max-width: 353px;
+  height: 235px;
   object-fit: cover;
+  margin: auto;
 }
+
