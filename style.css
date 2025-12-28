@@ -1,52 +1,111 @@
+/* =========================
+   GLOBAL STYLES
+   ========================= */
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
 }
 
+/* =========================
+   NAVBAR
+   ========================= */
+.navbar-brand {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+/* =========================
+   HERO SECTION
+   ========================= */
 .hero {
-  background: url('../images/food1.jpg') center/cover no-repeat;
-  color: white;
-  padding: 80px 0;
+  background: #ffffff;
+  padding: 60px 0 40px;
+  border-bottom: 1px solid #e0e0e0;
 }
 
+.hero h1 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* =========================
+   RECIPE CARDS
+   ========================= */
 .recipe-card {
-  margin-bottom: 30px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  text-align: center;
-}
-
-.recipe-card img {
-  width: 100%;
-  max-width: 353px;
-  height: 235px;
-  object-fit: cover;
-  margin: auto;
-}
-
-/* FORCE SAME IMAGE HEIGHT FOR ALL CARDS */
-.recipe-card .card-img-top {
-  height: 235px !important;
-  width: 100%;
-  object-fit: cover;
-}
-
-
-
-.recipe-card img {
-  transition: transform 0.3s ease;
-}
-
-.recipe-card:hover img {
-  transform: scale(1.03);
-}
-
-.recipe-card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .recipe-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
+/* IMAGE WRAPPER (FIXED HEIGHT) */
+.recipe-img-wrapper {
+  height: 235px;          /* FIXED IMAGE HEIGHT */
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
 
+.recipe-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
+/* CARD BODY */
+.recipe-card .card-body {
+  padding: 1.25rem;
+}
+
+/* CARD TITLE */
+.recipe-card .card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* CARD TEXT */
+.recipe-card .card-text {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* BUTTON */
+.recipe-card .btn {
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+footer {
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   RESPONSIVE TWEAKS
+   ========================= */
+@media (max-width: 767px) {
+  .hero {
+    padding: 40px 0 30px;
+  }
+
+  .recipe-img-wrapper {
+    height: 200px;   /* Slightly smaller on mobile */
+  }
+}
