@@ -1,0 +1,19 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.hero {
+  background: url('../images/food1.jpg') center/cover no-repeat;
+  color: white;
+  padding: 80px 0;
+}
+
+.recipe-card {
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.recipe-card img {
+  height: 220px;
+  object-fit: cover;
+}
