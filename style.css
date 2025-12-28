@@ -14,13 +14,14 @@ body {
   text-align: center;
 }
 
-/* Fix recipe card image size */
 .recipe-card img {
   width: 100%;
-  height: 235px;        /* FIXED HEIGHT */
-  object-fit: cover;   /* Crop image, no stretching */
-  display: block;
+  max-width: 353px;
+  height: 235px;
+  object-fit: cover;
+  margin: auto;
 }
+
 
 .recipe-card img {
   transition: transform 0.3s ease;
