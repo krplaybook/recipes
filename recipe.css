@@ -1,75 +1,85 @@
 /* =========================
-   RECIPE PAGE ONLY
-   (NO INDEX IMPACT)
-========================= */
-
-.recipe-page .back-link {
-  margin: 20px;
-  display: inline-block;
-  font-weight: 500;
-  text-decoration: none;
+   RESET / SAFETY
+   ========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.recipe-page .recipe-title {
-  text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 30px;
+/* =========================
+   GLOBAL
+   ========================= */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f8f9fa;
 }
 
-/* 30 : 30 : 40 GRID */
-.recipe-page .recipe-grid {
-  display: grid;
-  grid-template-columns: 30% 30% 40%;
-  gap: 30px;
-  padding: 0 40px;
-  align-items: start;
+/* =========================
+   HERO
+   ========================= */
+.hero {
+  padding: 60px 0 40px;
+  border-bottom: 1px solid #ddd;
 }
 
-/* INGREDIENTS & METHOD BOX */
-.recipe-page .recipe-box {
-  background: #ffffff;
-  padding: 20px;
+/* =========================
+   CARD
+   ========================= */
+.recipe-card {
+  border: none;
   border-radius: 12px;
+  overflow: hidden;              /* FORCE CONTENT INSIDE */
+  background: #fff;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-.recipe-page h3 {
-  margin-top: 0;
+/* HOVER ANIMATION */
+.recipe-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
 }
 
-/* IMAGE CENTER */
-.recipe-page .recipe-image {
+/* =========================
+   IMAGE FIX (MOST IMPORTANT)
+   ========================= */
+.recipe-img-wrapper {
+  width: 100%;
+  height: 235px;                 /* FIXED HEIGHT */
+  overflow: hidden;
+  background: #eee;
+}
+
+.recipe-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;             /* FORCE SAME SIZE */
+  display: block;
+}
+
+/* =========================
+   CARD BODY
+   ========================= */
+.card-body {
+  padding: 1.25rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
 }
 
-.recipe-page .recipe-image img {
-  width: 100%;
-  max-height: 420px;
-  object-fit: cover;
-  border-radius: 12px;
+.card-title {
+  font-weight: 600;
 }
 
-/* VIDEO FULL WIDTH */
-.recipe-page .recipe-video {
-  margin: 50px auto;
-  padding: 0 40px;
-  max-width: 1200px;
+.card-text {
+  color: #555;
+  line-height: 1.4;
 }
 
-.recipe-page .recipe-video iframe {
-  width: 100%;
-  height: 480px;
-  border-radius: 12px;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .recipe-page .recipe-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .recipe-page .recipe-video iframe {
-    height: 320px;
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 768px) {
+  .recipe-img-wrapper {
+    height: 200px;
   }
 }
