@@ -8,52 +8,55 @@
 </head>
 
 <body class="app-layout">
-  <!-- HEADER -->
+
   <header class="app-header">
     🍴 Kunal - Ruchi Recipes
   </header>
 
-  <!-- CONTENT -->
   <main class="app-content">
-    <!-- HERO -->
+
     <section class="hero">
       <h1>Delicious Homemade Recipes</h1>
       <p>Simple • Healthy • Tasty</p>
     </section>
 
-    <!-- RECIPE GRID -->
-    <section class="container">
-      <div class="recipe-grid">
-        <!-- CARD 1 -->
-        <div class="recipe-card">
-          <img src="Palak-Matar-Recipe.jpg" alt="Palak Matar" />
-          <div class="card-body">
-            <h5>Palak Matar</h5>
-            <p class="recipe-desc">
-              Creamy North Indian spinach curry with green peas.
-            </p>
-            <a href="recipe.html" class="btn">View Recipe</a>
+    <section class="container mt-4">
+      <div class="row g-4">
+
+        <!-- Card 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="recipe-card">
+            <img src="images/palak-matar.jpg" alt="Palak Matar">
+            <div class="card-body">
+              <h5>Palak Matar</h5>
+              <p class="recipe-desc">Creamy North Indian delight.</p>
+              <a href="recipe.html" class="btn btn-primary">View Recipe</a>
+            </div>
           </div>
         </div>
 
-        <!-- CARD 2 -->
-        <div class="recipe-card">
-          <img src="Palak-Bread-Tikki.jpg" alt="Palak Tikki" />
-          <div class="card-body">
-            <h5>Palak Tikki</h5>
-            <p class="recipe-desc">
-              Crispy spinach patties blended with spices and herbs.
-            </p>
-            <a href="#" class="btn">View Recipe</a>
+        <!-- Card 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="recipe-card">
+            <img src="images/palak-tikki.jpg" alt="Palak Tikki">
+            <div class="card-body">
+              <h5>Palak Tikki</h5>
+              <p class="recipe-desc">
+                Crispy spinach patties blended with spices.
+              </p>
+              <a href="#" class="btn btn-primary">View Recipe</a>
+            </div>
           </div>
         </div>
+
       </div>
     </section>
+
   </main>
 
-  <!-- FOOTER -->
   <footer class="app-footer">
     © 2025 | Kunal's Recipe Book
   </footer>
+
 </body>
 </html>
