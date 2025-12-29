@@ -1,0 +1,101 @@
+/* =========================
+   RESET (SAFE)
+========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* =========================
+   RECIPE PAGE LAYOUT
+========================= */
+.recipe-page {
+  padding: 20px 30px 40px;
+}
+
+/* Back link */
+.recipe-page .back-link {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #0d6efd;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.recipe-page .back-link:hover {
+  text-decoration: underline;
+}
+
+/* Title */
+.recipe-page .recipe-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin: 20px 0 30px;
+}
+
+/* =========================
+   TOP ROW (3 COLUMN)
+========================= */
+.recipe-page .recipe-grid {
+  display: grid;
+  grid-template-columns: 30% 30% 40%;
+  gap: 30px;
+  align-items: start;
+}
+
+/* White cards */
+.recipe-page .recipe-box {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.recipe-page .recipe-box h3 {
+  margin-top: 0;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* =========================
+   IMAGE (CENTER COLUMN)
+========================= */
+.recipe-page .recipe-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recipe-page .recipe-image img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* =========================
+   VIDEO (FULL WIDTH ROW)
+========================= */
+.recipe-page .recipe-video {
+  margin-top: 50px;
+}
+
+.recipe-page .recipe-video iframe {
+  width: 100%;
+  height: 480px;
+  border-radius: 12px;
+  border: none;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .recipe-page .recipe-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recipe-page .recipe-video iframe {
+    height: 320px;
+  }
+}
