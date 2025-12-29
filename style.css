@@ -60,14 +60,12 @@ html, body {
   background-color: #f8f9fa;
 }
 
-/* =========================================================
-   ================= INDEX PAGE (UNCHANGED) =================
-   ========================================================= */
-
-/* HERO */
+/* =========================
+   HERO (INDEX PAGE)
+   ========================= */
 .hero {
   background: #ffffff;
-  padding: 60px 20px 40px;
+  padding: 50px 20px 30px;
   border-bottom: 1px solid #ddd;
   text-align: center;
 }
@@ -75,7 +73,7 @@ html, body {
 .hero h1 {
   font-size: 2.3rem;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .hero p {
@@ -83,7 +81,9 @@ html, body {
   font-size: 1rem;
 }
 
-/* RECIPE CARDS */
+/* =========================
+   RECIPE CARDS (INDEX PAGE)
+   ========================= */
 .recipe-card {
   height: 420px;
   border-radius: 12px;
@@ -96,13 +96,14 @@ html, body {
 
 .recipe-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.18);
 }
 
 .recipe-card img {
   width: 100%;
   height: 220px;
   object-fit: cover;
+  display: block;
 }
 
 .recipe-card .card-body {
@@ -110,6 +111,11 @@ html, body {
   padding: 1.25rem;
   display: flex;
   flex-direction: column;
+}
+
+.recipe-card h5 {
+  font-weight: 600;
+  margin-bottom: 6px;
 }
 
 .recipe-desc {
@@ -121,64 +127,80 @@ html, body {
   -webkit-box-orient: vertical;
 }
 
-/* =========================================================
-   ================= RECIPE PAGE ONLY ======================
-   ========================================================= */
-
-/* BACK LINK */
-.back-link {
-  margin: 16px 0 0 20px;
-}
-
-.back-link a {
-  color: #6f42c1;
-  text-decoration: none;
+.recipe-card .btn {
+  margin-top: auto;
   font-weight: 500;
 }
 
-.back-link a:hover {
-  text-decoration: underline;
+/* =========================
+   RECIPE PAGE ONLY
+   ========================= */
+
+/* Back link */
+.back-link {
+  margin: 20px 40px;
+  font-weight: 500;
 }
 
-/* TITLE */
+/* Recipe title */
 .recipe-title {
   text-align: center;
   font-size: 2.4rem;
   font-weight: 700;
-  margin: 20px 0 40px;
+  margin: 10px 0 40px;
 }
 
-/* MAIN GRID */
+/* === FORCE ONE ROW LAYOUT === */
 .recipe-grid {
   display: grid;
   grid-template-columns: 30% 30% 40%;
   gap: 30px;
-  align-items: flex-start;
+  align-items: stretch;
+  width: 100%;
   padding: 0 40px;
 }
 
-/* INGREDIENTS + METHOD CARDS */
+/* Prevent wrapping glitches */
+.recipe-grid > * {
+  min-width: 0;
+}
+
+/* Ingredient & Method Cards */
 .recipe-box {
   background: #ffffff;
   border-radius: 14px;
   padding: 24px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  height: 100%;
 }
 
+/* Headings inside recipe */
 .recipe-box h3 {
   margin-top: 0;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #ddd;
+  margin-bottom: 16px;
+  font-weight: 700;
 }
 
-/* LIST STYLES */
-.recipe-box ul,
+/* Ingredient list */
+.recipe-box ul {
+  padding-left: 18px;
+}
+
+.recipe-box li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* Method ordered list */
 .recipe-box ol {
-  padding-left: 20px;
-  line-height: 1.8;
+  padding-left: 22px;
 }
 
-/* CENTER IMAGE */
+.recipe-box ol li {
+  margin-bottom: 14px;
+}
+
+/* === IMAGE COLUMN === */
 .recipe-image-wrapper {
   display: flex;
   justify-content: center;
@@ -187,20 +209,38 @@ html, body {
 
 .recipe-image-wrapper img {
   max-width: 100%;
-  height: auto;
+  max-height: 520px;
+  object-fit: contain;
+  display: block;
 }
 
-/* VIDEO SECTION */
+/* =========================
+   VIDEO — FULL WIDTH ROW
+   ========================= */
 .recipe-video {
+  grid-column: 1 / -1;
   width: 100%;
-  margin: 50px 0 30px;
   padding: 0 40px;
+  margin: 50px 0 40px;
 }
 
 .recipe-video iframe {
   width: 100%;
   height: 420px;
   border-radius: 14px;
+  display: block;
+}
+
+/* =========================
+   SCROLLBAR
+   ========================= */
+.app-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.app-content::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
 }
 
 /* =========================
@@ -214,5 +254,19 @@ html, body {
 
   .recipe-video iframe {
     height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .recipe-card {
+    height: 400px;
+  }
+
+  .recipe-card img {
+    height: 200px;
   }
 }
