@@ -3,80 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <title>Palak Matar</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="recipe.css" />
+  <link rel="stylesheet" href="style.css"> <!-- existing index css -->
+  <link rel="stylesheet" href="recipe.css"> <!-- recipe-only css -->
 </head>
 
-<body class="app-layout recipe-page">
+<body>
+  <div class="app-layout recipe-page">
 
-  <header class="app-header">
-    🍴 Kunal - Ruchi Recipes
-  </header>
+    <!-- HEADER (same as index) -->
+    <header class="app-header">
+      🍽️ Kunal - Ruchi Recipes
+    </header>
 
-  <main class="app-content">
+    <!-- CONTENT -->
+    <main class="app-content">
 
-    <a href="index.html" class="back-link">← Back to Recipes</a>
+      <a href="index.html" class="back-link">← Back to Recipes</a>
 
-    <h1 class="recipe-title">Palak Matar</h1>
+      <h1 class="recipe-title">Palak Matar</h1>
 
-    <!-- ROW 1 -->
-    <section class="recipe-grid">
+      <!-- INGREDIENTS | IMAGE | METHOD -->
+      <section class="recipe-grid">
 
-      <!-- Ingredients -->
-      <div class="recipe-box ingredients">
-        <h2>Ingredients</h2>
-        <ul>
-          <li>🥬 Spinach – 500 g</li>
-          <li>🍅 Tomato – 1</li>
-          <li>🧅 Onion – 2 medium</li>
-          <li>🟢 Green peas – 1 cup</li>
-          <li>🌿 Kasuri Methi</li>
-          <li>🌰 Cumin & Jeera seeds</li>
-          <li>🧂 Turmeric, Chilli, Salt</li>
-          <li>✨ Dhaniya, Garam Masala</li>
-        </ul>
-      </div>
+        <!-- INGREDIENTS -->
+        <div class="recipe-box">
+          <h3>Ingredients</h3>
+          <ul>
+            <li>🥬 Spinach – 500 g</li>
+            <li>🍅 Tomato – 1</li>
+            <li>🧅 Onion – 2 medium</li>
+            <li>🟢 Green peas – 1 cup</li>
+            <li>🌿 Kasuri Methi</li>
+            <li>🌰 Cumin & Jeera seeds</li>
+            <li>🧂 Turmeric, Chilli, Salt</li>
+            <li>✨ Dhaniya, Garam Masala</li>
+          </ul>
+        </div>
 
-      <!-- Image -->
-      <div class="recipe-box recipe-image">
-        <img src="palak-matar-chef.jpg" alt="Palak Matar">
-      </div>
+        <!-- IMAGE -->
+        <div class="recipe-image">
+          <img src="palak-matar.jpg" alt="Palak Matar">
+        </div>
 
-      <!-- Method -->
-      <div class="recipe-box method">
-        <h2>Method</h2>
-        <ol>
-          <li>🥬 Boil spinach for 3 minutes.</li>
-          <li>❄️ Transfer spinach to cold water.</li>
-          <li>🌀 Grind into smooth puree.</li>
-          <li>🔥 Heat oil in a pan.</li>
-          <li>🌰 Add cumin & jeera seeds.</li>
-          <li>🧅 Add chopped onions.</li>
-          <li>✨ Sauté until golden brown.</li>
-          <li>🧄 Add ginger–garlic paste.</li>
-          <li>🍅 Add tomato and cook.</li>
-          <li>🧂 Add spices.</li>
-          <li>🟢 Add peas and cook.</li>
-          <li>🌿 Add spinach puree & simmer 😋</li>
-        </ol>
-      </div>
+        <!-- METHOD -->
+        <div class="recipe-box">
+          <h3>Method</h3>
+          <ol>
+            <li>🥬 Boil spinach for 3 minutes.</li>
+            <li>❄️ Strain spinach and transfer to cold water.</li>
+            <li>🌀 Grind spinach into a smooth puree.</li>
+            <li>🔥 Heat 4 tbsp oil in a pan.</li>
+            <li>🌰 Add cumin & jeera seeds.</li>
+            <li>🧅 Add chopped onions.</li>
+            <li>✨ Sauté until golden brown.</li>
+            <li>🧄 Add ginger–garlic paste.</li>
+            <li>🍅 Add chopped tomato and cook.</li>
+            <li>🧂 Add spice powders.</li>
+            <li>🟢 Add green peas and cook.</li>
+            <li>🌿 Add spinach puree & simmer 😋</li>
+          </ol>
+        </div>
 
-    </section>
+      </section>
 
-    <!-- ROW 2 -->
-    <section class="recipe-video">
-      <iframe
-        src="https://www.youtube.com/embed/VIDEO_ID"
-        title="Palak Matar Recipe"
-        allowfullscreen>
-      </iframe>
-    </section>
+      <!-- VIDEO (FULL WIDTH) -->
+      <section class="recipe-video">
+        <iframe
+          src="https://www.youtube.com/embed/VIDEO_ID"
+          allowfullscreen>
+        </iframe>
+      </section>
 
-  </main>
+    </main>
 
-  <footer class="app-footer">
-    © 2025 | Kunal's Recipe Book
-  </footer>
+    <!-- FOOTER (same as index) -->
+    <footer class="app-footer">
+      © 2025 | Kunal's Recipe Book
+    </footer>
 
+  </div>
 </body>
 </html>
