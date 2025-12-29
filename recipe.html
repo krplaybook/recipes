@@ -1,36 +1,52 @@
-<div class="app-content">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Palak Matar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-  <a href="index.html" class="back-link">← Back to Recipes</a>
+<body class="app-layout">
 
-  <h1 class="recipe-title">Palak Matar</h1>
+  <!-- HEADER -->
+  <header class="app-header">
+    🍽️ Kunal - Ruchi Recipes
+  </header>
 
-  <!-- 🔥 THIS GRID IS REQUIRED -->
-  <div class="recipe-grid">
+  <!-- CONTENT -->
+  <main class="app-content">
 
-    <!-- Ingredients -->
-    <div class="recipe-box">
-      <h3>Ingredients</h3>
-      <ul>
-        <li>🥬 Spinach – 500 g</li>
-        <li>🍅 Tomato – 1</li>
-        <li>🧅 Onion – 2 medium</li>
-        <li>🟢 Green peas – 1 cup</li>
-        <li>🌿 Kasuri Methi</li>
-        <li>🌰 Cumin & Jeera seeds</li>
-        <li>🧂 Turmeric, Chilli, Salt</li>
-        <li>✨ Dhaniya, Garam Masala</li>
-      </ul>
-    </div>
+    <a href="index.html" class="back-link">← Back to Recipes</a>
 
-    <!-- Image -->
-    <div class="recipe-image-wrapper">
-      <img src="chef-board-with-dish.png" alt="Palak Matar">
-    </div>
+    <h1 class="recipe-title">Palak Matar</h1>
 
-    <!-- Method -->
-    <div class="recipe-box">
-      <h3>Method</h3>
-      <ol>
+    <!-- ROW 1 -->
+    <div class="recipe-grid">
+
+      <!-- INGREDIENTS -->
+      <section class="recipe-box ingredients">
+        <h3>Ingredients</h3>
+        <ul>
+          <li>🥬 Spinach – 500 g</li>
+          <li>🍅 Tomato – 1</li>
+          <li>🧅 Onion – 2 medium</li>
+          <li>🟢 Green peas – 1 cup</li>
+          <li>🌿 Kasuri Methi</li>
+          <li>🌰 Cumin & Jeera seeds</li>
+          <li>🧂 Turmeric, Chilli, Salt</li>
+          <li>✨ Dhaniya, Garam Masala</li>
+        </ul>
+      </section>
+
+      <!-- IMAGE -->
+      <section class="recipe-image">
+        <img src="chef-board-with-dish.png" alt="Palak Matar">
+      </section>
+
+      <!-- METHOD -->
+      <section class="recipe-box method">
+        <h3>Method</h3>
+        <ol>
           <li>🥬 Boil spinach for 3 minutes.</li>
           <li>❄️ Strain the spinach and immediately transfer it to cold water.</li>
           <li>🌀 Grind the spinach into a smooth puree.</li>
@@ -51,16 +67,24 @@
             Cook for another 3 minutes and serve hot 😋
           </li>
         </ol>
+      </section>
+
+      <!-- ROW 2 : VIDEO -->
+      <section class="recipe-video">
+        <iframe
+          src="https://www.youtube.com/embed/VIDEO_ID"
+          allowfullscreen>
+        </iframe>
+      </section>
+
     </div>
 
-    <!-- ✅ FULL WIDTH VIDEO -->
-    <div class="recipe-video">
-      <iframe 
-        src="https://www.youtube.com/embed/VIDEO_ID"
-        frameborder="0"
-        allowfullscreen>
-      </iframe>
-    </div>
+  </main>
 
-  </div>
-</div>
+  <!-- FOOTER -->
+  <footer class="app-footer">
+    © 2025 | Kunal's Recipe Book
+  </footer>
+
+</body>
+</html>
