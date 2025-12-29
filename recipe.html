@@ -5,78 +5,66 @@
   <title>Palak Matar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav class="navbar navbar-dark bg-dark">
-  <a class="navbar-brand" href="index.html">← Back to Recipes</a>
-</nav>
+<a href="index.html" class="back-link">← Recipes</a>
 
-<div class="container my-5">
+<section class="recipe-grid-container">
 
-  <h1 class="mb-4">Palak Matar</h1>
+  <h1 class="recipe-title">Palak Matar</h1>
 
-  <div class="row">
+  <!-- 3 COLUMN GRID -->
+  <div class="recipe-grid">
 
-    <!-- LEFT: IMAGE -->
-    <div class="col-md-5">
-      <img 
-        src="Palak-Matar-Recipe.jpg" 
-        class="img-fluid rounded shadow"
-        alt="Palak Matar Recipe">
-    </div>
-
-    <!-- RIGHT: INGREDIENTS + STEPS -->
-    <div class="col-md-7">
-
+    <!-- INGREDIENTS -->
+    <div class="recipe-box">
       <h3>Ingredients</h3>
       <ul>
-        <li>Spinach – 500g</li>
+        <li>Spinach – 500 g</li>
         <li>Tomato – 1</li>
-        <li>Onion – 2 medium size</li>
+        <li>Onion – 2 medium</li>
         <li>Peas – 1 cup</li>
         <li>Kasuri Methi</li>
-        <li>Oil, Cumin Seeds, Jeera Seeds</li>
-        <li>Spices – Turmeric, Chilli, Salt, Dhaniya, Garam Masala, Jeera</li>
+        <li>Cumin & Jeera</li>
+        <li>Turmeric, Chilli, Salt</li>
+        <li>Dhaniya, Garam Masala</li>
       </ul>
-
-      <h3 class="mt-4">Steps</h3>
-      <ol>
-        <li>Boil spinach for 3 mins.</li>
-        <li>Strain and put spinach in cold water.</li>
-        <li>Grind the spinach.</li>
-        <li>Heat oil in a pan.</li>
-        <li>Add cumin and jeera seeds.</li>
-        <li>Add finely chopped onions.</li>
-        <li>Roast until golden brown.</li>
-        <li>Add ginger garlic paste and roast for 1 min.</li>
-        <li>Add chopped tomato and cook for 3 mins.</li>
-        <li>Add spice powders.</li>
-        <li>Add peas and cook for 3 mins.</li>
-        <li>Add spinach puree, kasuri methi, water, garam masala and cook for 3 mins.</li>
-      </ol>
-
     </div>
+
+    <!-- IMAGE -->
+    <div class="recipe-image-box">
+      <img src="Palak-Matar-Recipe.jpg" alt="Palak Matar">
+    </div>
+
+    <!-- METHOD -->
+    <div class="recipe-box">
+      <h3>Method</h3>
+      <ol>
+        <li>Boil spinach for 3 minutes.</li>
+        <li>Cool immediately and grind.</li>
+        <li>Heat oil in a pan.</li>
+        <li>Add cumin and jeera.</li>
+        <li>Add onions and cook till golden.</li>
+        <li>Add tomato and spices.</li>
+        <li>Add peas and spinach puree.</li>
+        <li>Simmer and serve.</li>
+      </ol>
+    </div>
+
   </div>
 
-  <!-- VIDEO SECTION -->
-  <hr class="my-5">
-
-  <h3 class="mt-4">🎥 Recipe Video</h3>
-
-  <div class="embed-responsive embed-responsive-16by9">
-    <iframe 
-      class="embed-responsive-item"
+  <!-- VIDEO -->
+  <div class="recipe-video">
+    <iframe
       src="https://www.youtube.com/embed/taf23RqKN_s"
       allowfullscreen>
     </iframe>
   </div>
 
-</div>
-
-
+</section>
 
 </body>
 </html>
