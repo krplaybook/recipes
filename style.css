@@ -39,9 +39,6 @@ html, body {
   font-size: 0.9rem;
 }
 
-/* =========================
-   CONTENT WRAPPER
-   ========================= */
 .app-content {
   overflow-y: auto;
 }
@@ -50,7 +47,7 @@ html, body {
    RECIPE PAGE
    ========================= */
 .recipe-page {
-  max-width: 1100px; /* tighter focus */
+  max-width: 1100px;
   margin: 40px auto;
   padding: 0 20px;
 }
@@ -61,7 +58,6 @@ html, body {
   font-size: 2.2rem;
 }
 
-/* BACK LINK */
 .back-to-recipes {
   display: inline-block;
   margin-bottom: 18px;
@@ -78,7 +74,7 @@ html, body {
    ========================= */
 .recipe-top-circle {
   display: grid;
-  grid-template-columns: 2.5fr 1fr 2.5fr;
+  grid-template-columns: 2.5fr 1.6fr 2.5fr;
   gap: 28px;
   align-items: center;
   margin-bottom: 50px;
@@ -114,29 +110,42 @@ html, body {
 }
 
 /* =========================
-   CIRCULAR IMAGE (ANCHORED)
+   CHEF BOARD IMAGE
    ========================= */
-.recipe-image-circle {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  overflow: hidden;
+.chef-board {
+  position: relative;
+  width: 320px;
+  height: 420px;
   margin: auto;
-  background: #f4f6f8;
-  padding: 6px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  transition: transform 0.25s ease;
 }
 
-.recipe-image-circle:hover {
-  transform: scale(1.03);
+.chef-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-.recipe-image-circle img {
+/* Wooden board frame */
+.board-frame {
+  position: absolute;
+  top: 70px;
+  right: 22px;
+  width: 175px;
+  height: 255px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+/* Recipe image inside board */
+.board-recipe-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.chef-board:hover .board-recipe-image {
+  transform: scale(1.05);
 }
 
 /* =========================
@@ -161,8 +170,8 @@ html, body {
     gap: 30px;
   }
 
-  .recipe-image-circle {
-    width: 160px;
-    height: 160px;
+  .chef-board {
+    width: 280px;
+    height: 380px;
   }
 }
