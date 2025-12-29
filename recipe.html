@@ -3,17 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <title>Palak Matar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="app-layout">
+<body class="app-layout recipe-page">
 
-  <!-- HEADER -->
   <header class="app-header">
-    🍽️ Kunal - Ruchi Recipes
+    🍴 Kunal - Ruchi Recipes
   </header>
 
-  <!-- CONTENT -->
   <main class="app-content">
 
     <a href="index.html" class="back-link">← Back to Recipes</a>
@@ -21,11 +20,11 @@
     <h1 class="recipe-title">Palak Matar</h1>
 
     <!-- ROW 1 -->
-    <div class="recipe-grid">
+    <section class="recipe-grid">
 
-      <!-- INGREDIENTS -->
-      <section class="recipe-box ingredients">
-        <h3>Ingredients</h3>
+      <!-- Ingredients -->
+      <div class="recipe-box ingredients">
+        <h2>Ingredients</h2>
         <ul>
           <li>🥬 Spinach – 500 g</li>
           <li>🍅 Tomato – 1</li>
@@ -36,52 +35,45 @@
           <li>🧂 Turmeric, Chilli, Salt</li>
           <li>✨ Dhaniya, Garam Masala</li>
         </ul>
-      </section>
+      </div>
 
-      <!-- IMAGE -->
-      <section class="recipe-image">
-        <img src="palak-matar-chef.jpg" alt="Palak Matar">
-      </section>
+      <!-- Image -->
+      <div class="recipe-box recipe-image">
+        <img src="images/palak-matar.jpg" alt="Palak Matar">
+      </div>
 
-      <!-- METHOD -->
-      <section class="recipe-box method">
-        <h3>Method</h3>
+      <!-- Method -->
+      <div class="recipe-box method">
+        <h2>Method</h2>
         <ol>
           <li>🥬 Boil spinach for 3 minutes.</li>
-          <li>❄️ Strain the spinach and immediately transfer it to cold water.</li>
-          <li>🌀 Grind the spinach into a smooth puree.</li>
-          <li>🔥 Heat 4 tablespoons of oil in a pan.</li>
-          <li>🌰 Add cumin seeds and jeera seeds.</li>
-          <li>🧅 Add finely chopped onions.</li>
-          <li>✨ Sauté until the onions turn golden brown.</li>
-          <li>🧄 Add ginger–garlic paste and roast for 1 minute.</li>
-          <li>🍅 Add one chopped tomato and cook for 3 minutes.</li>
-          <li>
-            🧂 Add ½ tsp turmeric powder, ½ tsp coriander powder,
-            1 tsp red chilli powder, and ½ tsp cumin powder.
-          </li>
-          <li>🟢 Add 1 cup green peas and cook for 3 minutes.</li>
-          <li>
-            🌿 Add salt to taste, spinach puree, kasuri methi,
-            ½ cup water, and ½ tsp garam masala.
-            Cook for another 3 minutes and serve hot 😋
-          </li>
+          <li>❄️ Transfer spinach to cold water.</li>
+          <li>🌀 Grind into smooth puree.</li>
+          <li>🔥 Heat oil in a pan.</li>
+          <li>🌰 Add cumin & jeera seeds.</li>
+          <li>🧅 Add chopped onions.</li>
+          <li>✨ Sauté until golden brown.</li>
+          <li>🧄 Add ginger–garlic paste.</li>
+          <li>🍅 Add tomato and cook.</li>
+          <li>🧂 Add spices.</li>
+          <li>🟢 Add peas and cook.</li>
+          <li>🌿 Add spinach puree & simmer 😋</li>
         </ol>
-      </section>
+      </div>
 
-      <!-- ROW 2 : VIDEO -->
-      <section class="recipe-video">
-        <iframe
-          src="https://www.youtube.com/embed/VIDEO_ID"
-          allowfullscreen>
-        </iframe>
-      </section>
+    </section>
 
-    </div>
+    <!-- ROW 2 -->
+    <section class="recipe-video">
+      <iframe
+        src="https://www.youtube.com/embed/VIDEO_ID"
+        title="Palak Matar Recipe"
+        allowfullscreen>
+      </iframe>
+    </section>
 
   </main>
 
-  <!-- FOOTER -->
   <footer class="app-footer">
     © 2025 | Kunal's Recipe Book
   </footer>
