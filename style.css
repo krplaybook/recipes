@@ -88,6 +88,9 @@
   position: relative;
   width: 360px;
   margin: auto;
+
+  /* ✅ NEW: 1 CM LEFT PADDING */
+  padding-left: 1cm;
 }
 
 .chef-board img {
@@ -95,10 +98,10 @@
   display: block;
 }
 
-/* === BOARD PLACEHOLDER (INNER WOOD AREA) === */
+/* BOARD PLACEHOLDER (INNER WOOD AREA) */
 .board-placeholder {
   position: absolute;
-  top: 110px;          /* aligned to board opening */
+  top: 110px;
   left: 50%;
   transform: translateX(-50%);
 
@@ -112,7 +115,7 @@
   pointer-events: none;
 }
 
-/* === BOARD TEXT (CONTAINER-BASED SCALING) === */
+/* BOARD TEXT */
 .board-content {
   width: 100%;
   height: 100%;
@@ -129,7 +132,7 @@
   font-family: "Georgia", serif;
   color: #3b2a1a;
 
-  /* 🔥 SCALE BASED ON IMAGE CONTAINER */
+  /* container-based scaling */
   font-size: clamp(1.4rem, 6%, 2rem);
 
   font-weight: 700;
@@ -162,6 +165,7 @@
 
   .chef-board {
     order: -1;
+    padding-left: 0; /* remove offset on small screens */
   }
 
   .board-placeholder {
