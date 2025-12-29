@@ -1,34 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Palak Matar</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Unified CSS -->
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<!-- HEADER -->
-<header class="app-header">
-  🍴 Kunal - Ruchi Recipes
-</header>
-
 <div class="app-content">
 
-  <!-- BACK -->
-  <div class="recipe-back">
-    ← <a href="index.html">Back to Recipes</a>
-  </div>
+  <a href="index.html" class="back-link">← Back to Recipes</a>
 
-  <!-- TITLE -->
   <h1 class="recipe-title">Palak Matar</h1>
 
-  <!-- ===== ROW 1 : ING | IMAGE | METHOD ===== -->
-  <section class="recipe-layout">
+  <!-- 🔥 THIS GRID IS REQUIRED -->
+  <div class="recipe-grid">
 
-    <!-- INGREDIENTS -->
+    <!-- Ingredients -->
     <div class="recipe-box">
       <h3>Ingredients</h3>
       <ul>
@@ -43,15 +22,16 @@
       </ul>
     </div>
 
-    <!-- IMAGE -->
-    <div class="recipe-chef">
-      <img src="palak-matar-chef.jpg" alt="Chef holding board">
+    <!-- Image -->
+    <div class="recipe-image-wrapper">
+      <img src="chef-board-with-dish.png" alt="Palak Matar">
     </div>
 
-    <!-- METHOD -->
+    <!-- Method -->
     <div class="recipe-box">
       <h3>Method</h3>
-      <ol><li>🥬 Boil spinach for 3 minutes.</li>
+      <ol>
+          <li>🥬 Boil spinach for 3 minutes.</li>
           <li>❄️ Strain the spinach and immediately transfer it to cold water.</li>
           <li>🌀 Grind the spinach into a smooth puree.</li>
           <li>🔥 Heat 4 tablespoons of oil in a pan.</li>
@@ -70,25 +50,17 @@
             ½ cup water, and ½ tsp garam masala.
             Cook for another 3 minutes and serve hot 😋
           </li>
-      </ol>
+        </ol>
     </div>
 
-  </section>
+    <!-- ✅ FULL WIDTH VIDEO -->
+    <div class="recipe-video">
+      <iframe 
+        src="https://www.youtube.com/embed/VIDEO_ID"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+    </div>
 
-  <!-- ===== ROW 2 : VIDEO (FULL WIDTH) ===== -->
-  <section class="recipe-video">
-    <iframe
-      src="https://www.youtube.com/embed/taf23RqKN_s"
-      allowfullscreen>
-    </iframe>
-  </section>
-
+  </div>
 </div>
-
-<!-- FOOTER -->
-<footer class="app-footer">
-  © 2025 | Kunal's Recipe Book
-</footer>
-
-</body>
-</html>
