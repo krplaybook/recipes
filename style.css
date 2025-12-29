@@ -1,88 +1,196 @@
 /* =========================
-   RECIPE PAGE ONLY
+   RESET & BASE
    ========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-.recipe-title {
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #f8f9fa;
+  color: #222;
+}
+
+/* =========================
+   APP LAYOUT
+   ========================= */
+.app-layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+.app-header {
+  background: #343a40;
+  color: #ffffff;
+  padding: 14px 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+.app-footer {
+  background: #343a40;
+  color: #ffffff;
   text-align: center;
-  font-size: 2.4rem;
+  padding: 10px;
+  font-size: 0.9rem;
+  position: sticky;
+  bottom: 0;
+}
+
+/* =========================
+   CONTENT
+   ========================= */
+.app-content {
+  overflow-y: auto;
+}
+
+/* =========================
+   HERO SECTION
+   ========================= */
+.hero {
+  background: #ffffff;
+  padding: 48px 20px 32px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.3rem;
   font-weight: 700;
-  margin: 30px 0 40px;
+  margin-bottom: 8px;
 }
 
-.back-link {
-  display: inline-block;
-  margin: 20px 40px;
-  font-weight: 500;
+.hero p {
+  color: #555;
+  font-size: 1rem;
 }
 
-/* GRID */
+/* =========================
+   CONTAINER
+   ========================= */
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* =========================
+   RECIPE GRID
+   ========================= */
 .recipe-grid {
   display: grid;
-  grid-template-columns: 30% 30% 40%;
-  gap: 30px;
-  padding: 0 40px 40px;
-  align-items: flex-start;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
 }
 
-/* COMMON BOX */
-.recipe-box {
+/* =========================
+   RECIPE CARD (FIXED SIZE)
+   ========================= */
+.recipe-card {
+  height: 420px;
   background: #ffffff;
-  border-radius: 14px;
-  padding: 24px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.recipe-box h3 {
-  margin-bottom: 14px;
-  font-weight: 600;
+.recipe-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.18);
 }
 
 /* IMAGE */
-.recipe-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.recipe-image img {
-  max-width: 100%;
-  max-height: 520px;
-  object-fit: contain;
-}
-
-/* VIDEO FULL WIDTH */
-.recipe-video {
-  grid-column: 1 / -1;
-  margin-top: 40px;
-}
-
-.recipe-video iframe {
+.recipe-card img {
   width: 100%;
-  height: 420px;
-  border-radius: 14px;
-  border: none;
+  height: 220px;
+  object-fit: cover;
+  display: block;
 }
 
-/* LIST SPACING */
-.ingredients ul,
-.method ol {
-  padding-left: 20px;
+/* CARD BODY */
+.recipe-card .card-body {
+  flex: 1;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.ingredients li,
-.method li {
-  margin-bottom: 10px;
-  line-height: 1.5;
+.recipe-card h5 {
+  font-weight: 600;
+  margin-bottom: 6px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 992px) {
-  .recipe-grid {
-    grid-template-columns: 1fr;
-    padding: 0 20px;
+/* DESCRIPTION (CLAMP) */
+.recipe-desc {
+  font-size: 0.95rem;
+  color: #555;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* BUTTON */
+.btn {
+  margin-top: auto;
+  padding: 10px;
+  background: #0d6efd;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background: #0b5ed7;
+}
+
+/* =========================
+   🔒 RECIPE PAGE ONLY
+   (Does NOT affect index)
+   ========================= */
+.recipe-page .recipe-grid {
+  display: grid;
+  grid-template-columns: 30% 30% 40%;
+  gap: 32px;
+  padding: 40px;
+}
+
+.recipe-page .recipe-video {
+  grid-column: 1 / -1;
+  margin: 40px;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.9rem;
   }
 
-  .recipe-video iframe {
-    height: 300px;
+  .recipe-card {
+    height: 400px;
+  }
+
+  .recipe-card img {
+    height: 200px;
   }
 }
