@@ -46,10 +46,25 @@ html, body {
   overflow-y: auto;
 }
 
+/* HERO (COMPACT + CENTERED) */
 .hero {
-  padding: 40px 20px 10px;
+  text-align: center;
+  padding: 30px 20px 20px;
 }
 
+.hero h1 {
+  margin: 0;
+  font-size: 2.1rem;
+  font-weight: 600;
+}
+
+.hero p {
+  margin-top: 6px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* RECIPE CARDS GRID */
 .recipe-cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -59,20 +74,40 @@ html, body {
   padding: 0 20px;
 }
 
+/* CARD */
 .recipe-card {
   border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 16px;
   display: flex;
   flex-direction: column;
+  background: #fff;
+
+  /* ANIMATION */
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
+.recipe-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* IMAGE WITH ZOOM */
 .recipe-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
 }
 
+.recipe-card:hover img {
+  transform: scale(1.04);
+}
+
+/* TEXT */
 .recipe-card h3 {
   margin: 14px 0 6px;
 }
@@ -80,19 +115,26 @@ html, body {
 .recipe-card p {
   flex-grow: 1;
   font-size: 0.95rem;
+  color: #444;
 }
 
+/* BUTTON */
 .btn {
   background: #0d6efd;
   color: #fff;
   text-align: center;
   padding: 10px;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 5px;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: #0b5ed7;
 }
 
 /* =========================
-   RECIPE PAGE
+   RECIPE PAGE (UNCHANGED)
    ========================= */
 .app-content {
   overflow-y: auto;
