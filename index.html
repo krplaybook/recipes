@@ -5,73 +5,39 @@
   <title>Kunal - Ruchi Recipes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Bootstrap 4 -->
+  <!-- Bootstrap (optional, keep if you use it) -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">🍴 Kunal - Ruchi Recipes</a>
-</nav>
+<div class="app-layout">
 
-<!-- HERO -->
-<section class="hero text-center">
-  <div class="container">
-    <h1>Delicious Homemade Recipes</h1>
-    <p>Simple • Healthy • Tasty</p>
-  </div>
-</section>
+  <!-- HEADER -->
+  <header class="app-header">
+    🍴 Kunal - Ruchi Recipes
+  </header>
 
-<!-- RECIPES -->
-<section class="container my-5">
-  <div class="row justify-content-center">
+  <!-- SCROLLABLE CONTENT -->
+  <main class="app-content">
 
-    <!-- CARD 1 -->
-    <div class="col-md-4 d-flex mb-4">
-      <div class="card recipe-card w-100">
+    <!-- HERO -->
+    <section class="hero text-center">
+      <h1>Delicious Homemade Recipes</h1>
+      <p>Simple • Healthy • Tasty</p>
+    </section>
 
-        <div class="recipe-img-wrapper">
-          <img src="Palak-Matar-Recipe.jpg" alt="Palak Matar">
-        </div>
+    <!-- RECIPE CARDS -->
+    <section class="container my-5">
+      <div class="row justify-content-center">
 
-        <div class="card-body d-flex flex-column">
-          <h5 class="card-title">Palak Matar</h5>
-          <p class="card-text">Creamy North Indian delight.</p>
-          <a href="recipe.html" class="btn btn-primary btn-block mt-auto">View Recipe</a>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- CARD 2 -->
-    <div class="col-md-4 d-flex mb-4">
-      <div class="card recipe-card w-100">
-
-        <div class="recipe-img-wrapper">
-          <img src="Palak-Bread-Tikki.jpg" alt="Palak Tikki">
-        </div>
-
-        <div class="card-body d-flex flex-column">
-          <h5 class="card-title">Palak Tikki</h5>
-          <p class="card-text">
-            Crispy spinach patties blended with potatoes, spices, and herbs — a healthy evening snack.
-          </p>
-          <a href="recipe.html" class="btn btn-primary btn-block mt-auto">View Recipe</a>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<footer class="text-center bg-dark text-light p-3">
-  © 2025 | Kunal's Recipe Book
-</footer>
-
-</body>
-</html>
+        <!-- CARD 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card recipe-card">
+            <img src="Palak-Matar-Recipe.jpg" alt="Palak Matar">
+            <div class="card-body">
+              <h5>Palak Matar</h5>
+              <p>Creamy North Indian delight.</p>
+              <a href="recipe.html" class="btn
