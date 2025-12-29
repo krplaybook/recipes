@@ -46,7 +46,6 @@ html, body {
   overflow-y: auto;
 }
 
-/* HERO (COMPACT + CENTERED) */
 .hero {
   text-align: center;
   padding: 30px 20px 20px;
@@ -55,16 +54,14 @@ html, body {
 .hero h1 {
   margin: 0;
   font-size: 2.1rem;
-  font-weight: 600;
 }
 
 .hero p {
   margin-top: 6px;
-  font-size: 1rem;
   color: #555;
 }
 
-/* RECIPE CARDS GRID */
+/* CARD GRID */
 .recipe-cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -82,19 +79,14 @@ html, body {
   display: flex;
   flex-direction: column;
   background: #fff;
-
-  /* ANIMATION */
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .recipe-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
-/* IMAGE WITH ZOOM */
 .recipe-card img {
   width: 100%;
   height: 200px;
@@ -107,7 +99,6 @@ html, body {
   transform: scale(1.04);
 }
 
-/* TEXT */
 .recipe-card h3 {
   margin: 14px 0 6px;
 }
@@ -115,10 +106,8 @@ html, body {
 .recipe-card p {
   flex-grow: 1;
   font-size: 0.95rem;
-  color: #444;
 }
 
-/* BUTTON */
 .btn {
   background: #0d6efd;
   color: #fff;
@@ -126,15 +115,10 @@ html, body {
   padding: 10px;
   text-decoration: none;
   border-radius: 5px;
-  transition: background 0.2s ease;
-}
-
-.btn:hover {
-  background: #0b5ed7;
 }
 
 /* =========================
-   RECIPE PAGE (UNCHANGED)
+   RECIPE PAGE
    ========================= */
 .app-content {
   overflow-y: auto;
@@ -158,13 +142,15 @@ html, body {
   margin-bottom: 40px;
 }
 
-.recipe-grid {
+/* ROW 1 */
+.recipe-top {
   display: grid;
-  grid-template-columns: 280px 360px 280px;
+  grid-template-columns: 1fr 1fr;
   gap: 40px;
-  justify-content: center;
+  margin-bottom: 40px;
 }
 
+/* INGREDIENTS + METHOD */
 .recipe-box {
   padding: 16px;
   border-radius: 6px;
@@ -177,10 +163,11 @@ html, body {
   box-shadow: inset 4px 0 0 #4caf50;
 }
 
+/* IMAGE */
 .recipe-image-box {
-  width: 360px;
-  height: 260px;
+  height: 280px;
   overflow: hidden;
+  border-radius: 8px;
 }
 
 .recipe-image-box img {
@@ -189,8 +176,13 @@ html, body {
   object-fit: cover;
 }
 
+/* METHOD */
+.recipe-method {
+  margin-bottom: 50px;
+}
+
+/* VIDEO */
 .recipe-video {
-  margin: 60px auto 0;
   aspect-ratio: 16 / 9;
 }
 
@@ -204,11 +196,7 @@ html, body {
    MOBILE
    ========================= */
 @media (max-width: 900px) {
-  .recipe-grid {
+  .recipe-top {
     grid-template-columns: 1fr;
-  }
-
-  .recipe-image-box {
-    margin: auto;
   }
 }
