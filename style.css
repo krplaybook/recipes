@@ -1,27 +1,38 @@
-/* RESET */
-* { box-sizing: border-box; }
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+  box-sizing: border-box;
+}
 
 html, body {
   margin: 0;
   height: 100%;
-  font-family: system-ui, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #ffffff;
 }
 
-/* APP LAYOUT */
+/* =========================
+   APP LAYOUT
+========================= */
 .app-layout {
   display: grid;
   grid-template-rows: auto 1fr auto;
   height: 100vh;
 }
 
-.app-header, .app-footer {
+.app-header {
   background: #343a40;
-  color: white;
+  color: #fff;
   padding: 14px 20px;
+  font-weight: 600;
 }
 
 .app-footer {
+  background: #343a40;
+  color: #fff;
   text-align: center;
+  padding: 10px;
   font-size: 0.9rem;
 }
 
@@ -29,9 +40,11 @@ html, body {
   overflow-y: auto;
 }
 
-/* RECIPE PAGE */
+/* =========================
+   RECIPE PAGE
+========================= */
 .recipe-page {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 40px auto;
   padding: 0 20px;
 }
@@ -48,35 +61,43 @@ html, body {
   text-decoration: none;
 }
 
-/* GRID */
+/* =========================
+   TOP GRID
+========================= */
 .recipe-top-circle {
   display: grid;
-  grid-template-columns: 2.5fr 1.6fr 2.5fr;
-  gap: 28px;
+  grid-template-columns: 2.4fr 1.8fr 2.4fr;
+  gap: 30px;
   align-items: center;
 }
 
-/* BOXES */
+/* =========================
+   INGREDIENTS & METHOD BOX
+========================= */
 .recipe-box {
-  background: #fcfcfc;
-  padding: 14px;
+  background: #fafafa;
+  padding: 16px;
   border-radius: 6px;
 }
 
 .recipe-box h3 {
+  margin-top: 0;
   border-bottom: 1px solid #ddd;
   padding-bottom: 6px;
 }
 
 .recipe-box li {
   margin-bottom: 8px;
+  line-height: 1.4;
 }
 
-/* CHEF BOARD */
+/* =========================
+   CHEF + BOARD
+========================= */
 .chef-board {
   position: relative;
   width: 320px;
-  height: 420px;
+  height: 430px;
   margin: auto;
 }
 
@@ -86,28 +107,41 @@ html, body {
   object-fit: contain;
 }
 
-/* 🔥 BOARD PLACEHOLDER (COORDINATES FIXED) */
+/* =========================
+   🔥 BOARD PLACEHOLDER (FIXED)
+========================= */
 .board-placeholder {
   position: absolute;
 
-  /* EXACT BOARD AREA */
-  top: 18%;
-  left: 56%;
-  width: 32%;
-  height: 64%;
+  /* EXACT board position (measured from image) */
+  top: 20%;
+  left: 57%;
+  width: 30%;
+  height: 60%;
 
+  background: #fff;
   overflow: hidden;
+
+  /* Optional: slight inset for wooden border */
+  padding: 6px;
 }
 
-/* IMAGE FILLS BOARD */
+/* =========================
+   RECIPE IMAGE (CORRECTED)
+========================= */
 .board-recipe-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* fills board for any aspect ratio */
+
+  object-fit: cover;      /* ✅ Fills board completely */
+  object-position: center;
+
   display: block;
 }
 
-/* VIDEO */
+/* =========================
+   VIDEO
+========================= */
 .recipe-video {
   margin-top: 40px;
   aspect-ratio: 16 / 9;
@@ -119,14 +153,16 @@ html, body {
   border: none;
 }
 
-/* MOBILE */
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 900px) {
   .recipe-top-circle {
     grid-template-columns: 1fr;
   }
 
   .chef-board {
-    width: 280px;
-    height: 380px;
+    width: 260px;
+    height: 360px;
   }
 }
