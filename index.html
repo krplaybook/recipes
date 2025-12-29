@@ -5,7 +5,7 @@
   <title>Kunal - Ruchi Recipes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Bootstrap (optional, keep if you use it) -->
+  <!-- Bootstrap (used for grid & buttons) -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
   <!-- Custom CSS -->
@@ -15,29 +15,66 @@
 
 <div class="app-layout">
 
-  <!-- HEADER -->
+  <!-- ================= HEADER ================= -->
   <header class="app-header">
     🍴 Kunal - Ruchi Recipes
   </header>
 
-  <!-- SCROLLABLE CONTENT -->
+  <!-- ================= SCROLLABLE CONTENT ================= -->
   <main class="app-content">
 
-    <!-- HERO -->
-    <section class="hero text-center">
+    <!-- HERO SECTION -->
+    <section class="hero">
       <h1>Delicious Homemade Recipes</h1>
       <p>Simple • Healthy • Tasty</p>
     </section>
 
-    <!-- RECIPE CARDS -->
+    <!-- RECIPES LIST -->
     <section class="container my-5">
       <div class="row justify-content-center">
 
-        <!-- CARD 1 -->
+        <!-- RECIPE CARD 1 -->
         <div class="col-md-4 mb-4">
           <div class="card recipe-card">
             <img src="Palak-Matar-Recipe.jpg" alt="Palak Matar">
             <div class="card-body">
               <h5>Palak Matar</h5>
               <p>Creamy North Indian delight.</p>
-              <a href="recipe.html" class="btn
+              <a href="recipe.html" class="btn btn-primary btn-block">
+                View Recipe
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- RECIPE CARD 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card recipe-card">
+            <img src="Palak-Bread-Tikki.jpg" alt="Palak Tikki">
+            <div class="card-body">
+              <h5>Palak Tikki</h5>
+              <p>
+                Crispy spinach patties blended with potatoes, spices, and herbs —
+                a healthy evening snack.
+              </p>
+              <a href="recipe.html" class="btn btn-primary btn-block">
+                View Recipe
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="app-footer">
+    © 2025 | Kunal's Recipe Book
+  </footer>
+
+</div>
+
+</body>
+</html>
