@@ -5,7 +5,7 @@
   <title>Kunal - Ruchi Recipes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Bootstrap (used for grid & buttons) -->
+  <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
   <!-- Custom CSS -->
@@ -15,52 +15,62 @@
 
 <div class="app-layout">
 
-  <!-- ================= HEADER ================= -->
+  <!-- HEADER -->
   <header class="app-header">
     🍴 Kunal - Ruchi Recipes
   </header>
 
-  <!-- ================= SCROLLABLE CONTENT ================= -->
+  <!-- SCROLLABLE CONTENT -->
   <main class="app-content">
 
-    <!-- HERO SECTION -->
+    <!-- HERO -->
     <section class="hero">
       <h1>Delicious Homemade Recipes</h1>
       <p>Simple • Healthy • Tasty</p>
     </section>
 
-    <!-- RECIPES LIST -->
+    <!-- RECIPES -->
     <section class="container my-5">
       <div class="row justify-content-center">
 
-        <!-- RECIPE CARD 1 -->
+        <!-- CARD 1 -->
         <div class="col-md-4 mb-4">
           <div class="card recipe-card">
+
             <img src="Palak-Matar-Recipe.jpg" alt="Palak Matar">
-            <div class="card-body">
+
+            <div class="card-body d-flex flex-column">
               <h5>Palak Matar</h5>
-              <p>Creamy North Indian delight.</p>
-              <a href="recipe.html" class="btn btn-primary btn-block">
+              <p class="recipe-desc">
+                Creamy North Indian delight.
+              </p>
+
+              <a href="recipe.html" class="btn btn-primary btn-block mt-auto">
                 View Recipe
               </a>
             </div>
+
           </div>
         </div>
 
-        <!-- RECIPE CARD 2 -->
+        <!-- CARD 2 -->
         <div class="col-md-4 mb-4">
           <div class="card recipe-card">
+
             <img src="Palak-Bread-Tikki.jpg" alt="Palak Tikki">
-            <div class="card-body">
+
+            <div class="card-body d-flex flex-column">
               <h5>Palak Tikki</h5>
-              <p>
+              <p class="recipe-desc">
                 Crispy spinach patties blended with potatoes, spices, and herbs —
-                a healthy evening snack.
+                a healthy evening snack that works perfectly as a starter.
               </p>
-              <a href="recipe.html" class="btn btn-primary btn-block">
+
+              <a href="recipe.html" class="btn btn-primary btn-block mt-auto">
                 View Recipe
               </a>
             </div>
+
           </div>
         </div>
 
@@ -69,7 +79,7 @@
 
   </main>
 
-  <!-- ================= FOOTER ================= -->
+  <!-- FOOTER -->
   <footer class="app-footer">
     © 2025 | Kunal's Recipe Book
   </footer>
