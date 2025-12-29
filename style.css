@@ -88,12 +88,6 @@ html, body {
   padding: 14px;
   border-radius: 6px;
   line-height: 1.7;
-  transition: background 0.25s ease, box-shadow 0.25s ease;
-}
-
-.recipe-box:hover {
-  background: #f9fafb;
-  box-shadow: inset 3px 0 0 #4caf50;
 }
 
 .recipe-box h3 {
@@ -112,7 +106,7 @@ html, body {
 }
 
 /* =========================
-   CHEF BOARD IMAGE
+   CHEF & BOARD
    ========================= */
 .chef-board {
   position: relative;
@@ -127,40 +121,23 @@ html, body {
   object-fit: contain;
 }
 
-/* =========================
-   WOODEN BOARD FRAME (FIXED)
-   ========================= */
+/* Wooden board area */
 .board-frame {
   position: absolute;
-
-  /* VISUAL ALIGNMENT TO BOARD */
-  top: 50%;
-  left: 62%;
-  transform: translate(-50%, -50%);
-
+  bottom: 38px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 175px;
-  height: 255px;
-
+  height: 235px;
   overflow: hidden;
-  border-radius: 4px;
-  background: #eee;
-  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08);
 }
 
-/* =========================
-   RECIPE IMAGE INSIDE BOARD
-   ========================= */
+/* 🔥 Recipe image FILLS board */
 .board-recipe-image {
   width: 100%;
   height: 100%;
-  object-fit: contain;       /* NO distortion */
-  background: #f4f4f4;
-  padding: 6px;
-  transition: transform 0.3s ease;
-}
-
-.chef-board:hover .board-recipe-image {
-  transform: scale(1.05);
+  object-fit: cover;
+  display: block;
 }
 
 /* =========================
@@ -182,7 +159,6 @@ html, body {
 @media (max-width: 900px) {
   .recipe-top-circle {
     grid-template-columns: 1fr;
-    gap: 30px;
   }
 
   .chef-board {
@@ -191,6 +167,8 @@ html, body {
   }
 
   .board-frame {
-    left: 50%;
+    bottom: 30px;
+    width: 160px;
+    height: 215px;
   }
 }
