@@ -85,7 +85,7 @@ html, body {
    RECIPE CARDS (INDEX PAGE)
    ========================= */
 .recipe-card {
-  height: 420px;                 /* 🔒 FIXED CARD HEIGHT */
+  height: 420px;
   border-radius: 12px;
   overflow: hidden;
   background: #ffffff;
@@ -101,10 +101,9 @@ html, body {
 
 .recipe-card img {
   width: 100%;
-  height: 220px;                 /* 🔒 FIXED IMAGE HEIGHT */
+  height: 220px;
   object-fit: cover;
   display: block;
-  flex-shrink: 0;
 }
 
 .recipe-card .card-body {
@@ -124,7 +123,7 @@ html, body {
   color: #555;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 3;         /* 🔒 MAX 3 LINES */
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
 
@@ -134,7 +133,7 @@ html, body {
 }
 
 /* =========================
-   SCROLLBAR (OPTIONAL)
+   SCROLLBAR
    ========================= */
 .app-content::-webkit-scrollbar {
   width: 8px;
@@ -150,8 +149,91 @@ html, body {
 }
 
 /* =========================
-   RESPONSIVE (INDEX)
+   RECIPE PAGE ONLY
    ========================= */
+
+/* Page title */
+.recipe-title {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin: 30px 0 40px;
+}
+
+/* Layout: 30 / 30 / 40 */
+.recipe-layout {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px 40px;
+
+  display: grid;
+  grid-template-columns: 30% 30% 40%;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+/* Ingredients & Method panels */
+.recipe-box {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 12px;
+}
+
+.recipe-box h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+/* Lists */
+.recipe-box ul,
+.recipe-box ol {
+  padding-left: 20px;
+}
+
+.recipe-box li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+/* Center image (chef stays untouched) */
+.recipe-chef {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1cm;
+}
+
+.recipe-chef img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Video row */
+.recipe-video {
+  max-width: 900px;
+  margin: 40px auto 0;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 992px) {
+  .recipe-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .recipe-chef {
+    padding-left: 0;
+  }
+
+  .recipe-title {
+    font-size: 2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 1.9rem;
@@ -163,94 +245,5 @@ html, body {
 
   .recipe-card img {
     height: 200px;
-  }
-}
-
-/* =========================================================
-   ================== RECIPE PAGE ONLY =====================
-   ========================================================= */
-
-/* BACK LINK */
-.recipe-back {
-  margin: 20px;
-  font-size: 0.9rem;
-}
-
-.recipe-back a {
-  text-decoration: none;
-  color: #007bff;
-}
-
-/* RECIPE TITLE */
-.recipe-title {
-  text-align: center;
-  margin: 20px 0 40px;
-  font-size: 2.4rem;
-  font-weight: 700;
-}
-
-/* RECIPE GRID */
-.recipe-layout {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px 40px;
-  display: grid;
-  grid-template-columns: 1fr 360px 1fr;
-  gap: 40px;
-  align-items: flex-start;
-}
-
-/* INGREDIENTS & METHOD */
-.recipe-box {
-  background: #ffffff;
-  padding: 22px;
-  border-radius: 12px;
-}
-
-.recipe-box h3 {
-  margin-bottom: 15px;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 6px;
-}
-
-.recipe-box li {
-  margin-bottom: 10px;
-  line-height: 1.5;
-}
-
-/* CHEF IMAGE (RECIPE PAGE ONLY) */
-.recipe-chef {
-  width: 360px;
-  margin: auto;
-  padding-left: 1cm;
-}
-
-.recipe-chef img {
-  width: 100%;
-  display: block;
-}
-
-/* VIDEO */
-.recipe-video {
-  max-width: 720px;
-  margin: 60px auto;
-  aspect-ratio: 16 / 9;
-}
-
-.recipe-video iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  border-radius: 12px;
-}
-
-/* RESPONSIVE (RECIPE PAGE) */
-@media (max-width: 992px) {
-  .recipe-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .recipe-chef {
-    padding-left: 0;
   }
 }
