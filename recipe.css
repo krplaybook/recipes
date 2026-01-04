@@ -1,5 +1,5 @@
 /* =========================
-   RESET / SAFETY
+   SAFETY RESET
 ========================= */
 *,
 *::before,
@@ -7,8 +7,13 @@
   box-sizing: border-box;
 }
 
+/* Prevent horizontal scroll globally (recipe page only) */
+.recipe-page {
+  overflow-x: hidden;
+}
+
 /* =========================
-   RECIPE PAGE LAYOUT
+   TOP CONTROLS
 ========================= */
 .recipe-page .back-link {
   display: inline-block;
@@ -23,17 +28,27 @@
 }
 
 /* =========================
-   INGREDIENTS | IMAGE | METHOD GRID
+   MAIN GRID (DESKTOP)
 ========================= */
 .recipe-page .recipe-grid {
   display: grid;
-  grid-template-columns: 30% 30% 40%;
-  gap: 30px;
-  padding: 0 40px;
+
+  /* 🔒 SAFE FRACTIONS — no % math overflow */
+  grid-template-columns: 3fr 3fr 4fr;
+
+  gap: 24px;
+
+  /* 🔒 MAX WIDTH CONSTRAINT */
+  max-width: 1200px;
+  margin: 0 auto;
+
+  padding: 0 24px;
   align-items: start;
 }
 
-/* WHITE CONTENT BOXES */
+/* =========================
+   CONTENT BOXES
+========================= */
 .recipe-page .recipe-box {
   background: #ffffff;
   padding: 20px;
@@ -41,26 +56,30 @@
 }
 
 /* =========================
-   IMAGE
+   IMAGE (CHEF)
 ========================= */
 .recipe-page .recipe-image {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* 🔑 prevents vertical clipping */
 }
 
 .recipe-page .recipe-image img {
   width: 100%;
-  max-height: 420px;
-  object-fit: cover;
+  height: auto;            /* 🔑 never force height */
+  max-height: 420px;       /* desktop-safe cap */
+  object-fit: contain;     /* 🔑 prevents crop */
   border-radius: 12px;
+  display: block;
 }
 
 /* =========================
    VIDEO (FULL WIDTH)
 ========================= */
 .recipe-page .recipe-video {
-  margin: 50px 40px;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 24px;
 }
 
 .recipe-page .recipe-video iframe {
@@ -71,31 +90,26 @@
 }
 
 /* =========================
-   MOBILE RESPONSIVE FIX
+   MOBILE & TABLET
 ========================= */
 @media (max-width: 992px) {
 
-  /* Stack layout vertically */
+  /* Stack layout */
   .recipe-page .recipe-grid {
     grid-template-columns: 1fr;
-    padding: 0 20px;
+    padding: 0 16px;
   }
 
-  /* Image smaller on mobile */
+  /* Image smaller but intact */
   .recipe-page .recipe-image img {
     max-height: 300px;
   }
 
-  /* Video height reduced */
-  .recipe-page .recipe-video {
-    margin: 30px 20px;
-  }
-
+  /* Video scaling */
   .recipe-page .recipe-video iframe {
     height: 280px;
   }
 
-  /* Title smaller */
   .recipe-page .recipe-title {
     font-size: 1.8rem;
   }
