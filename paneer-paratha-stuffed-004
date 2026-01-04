@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Paneer Paratha (Stuffed)</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- existing index css -->
+    <link rel="stylesheet" href="recipe.css">
+    <!-- recipe-only css -->
+</head>
+
+<body>
+    <div class="app-layout recipe-page">
+
+        <!-- HEADER (same as index) -->
+        <header class="app-header">
+            🍽️ Kunal - Ruchi Recipes
+        </header>
+
+        <!-- CONTENT -->
+        <main class="app-content">
+
+            <a href="index.html" class="back-link">← Back to Recipes</a>
+
+            <h1 class="recipe-title">🧀 Paneer Paratha (Stuffed)</h1>
+
+            <!-- INGREDIENTS | IMAGE | METHOD -->
+            <section class="recipe-grid">
+
+                <!-- INGREDIENTS -->
+                <div class="recipe-box">
+                    <h3>🧺 Ingredients</h3>
+                    <h4>For the Stuffing</h4>
+                    <ul>
+                        <li>🧀 Paneer – 200 g (grated)</li>
+                        <li>🧅 Onion – ½ medium, finely chopped</li>
+                        <li>🌶️ Green chillies – 4, finely chopped</li>
+                        <li>🌿 Coriander leaves – 2–3 tbsp, finely chopped</li>
+                        <li>🌶️ Red chilli powder – ½ tsp</li>
+                        <li>🧂 Salt – to taste</li>
+                        <li>🌿 Coriander powder – 1½ tbsp</li>
+                        <li>🌿 Cumin powder – ½ tsp</li>
+                        <li>🌶️ Garam masala – 1½ tsp</li>
+                    </ul>
+
+                    <h4>For the Dough</h4>
+                    <ul>
+                        <li>🌾 Wheat flour (Atta) – as required</li>
+                        <li>🧂 Salt – a pinch</li>
+                        <li>💧 Water – to knead</li>
+                        <li>🛢️ Oil – 1 tsp (optional)</li>
+                    </ul>
+
+                    <h4>For Cooking</h4>
+                    <ul>
+                        <li>🧈 Butter or oil – for roasting</li>
+                    </ul>
+                </div>
+
+                <!-- IMAGE -->
+                <div class="recipe-image">
+                    <img src="Paneer-Paratha-Stuffed-004.jpg" alt="Paneer-Paratha-Stuffed-004">
+                </div>
+
+                <!-- METHOD -->
+                <div class="recipe-box">
+                    <h3>👩‍🍳 Method</h3>
+                    <ol>
+                        <li>🌾 In a bowl, mix wheat flour and salt. Add water gradually and knead into a soft dough. Cover and rest for 15–20 minutes.</li>
+                        <li>🧀 In another bowl, add grated paneer, chopped onion, green chillies, and coriander leaves.</li>
+                        <li>🌶️ Add red chilli powder, coriander powder, cumin powder, garam masala, and salt. Mix well to form a crumbly stuffing.</li>
+                        <li>⚪ Divide dough into equal balls. Roll one ball slightly and place stuffing in the center.</li>
+                        <li>🔒 Bring edges together, seal properly, and gently flatten.</li>
+                        <li>🍞 Roll into a medium-thick paratha using dry flour.</li>
+                        <li>🔥 Heat a tawa on medium flame and place the paratha on it.</li>
+                        <li>🔁 Flip when bubbles appear. Apply oil or butter on both sides.</li>
+                        <li>✨ Cook until golden brown spots appear on both sides.</li>
+                        <li>🍽️ Serve hot with butter, curd, or pickle.</li>
+                    </ol>
+                </div>
+
+            </section>
+
+            <!-- VIDEO (FULL WIDTH) -->
+            <section class="recipe-video">
+                <iframe src="https://www.youtube.com/embed/jHmAEox04v8" allowfullscreen>
+                </iframe>
+            </section>
+
+        </main>
+
+        <!-- FOOTER (same as index) -->
+        <footer class="app-footer">
+            © 2025 | Kunal's Recipe Book
+        </footer>
+
+    </div>
+</body>
+
+</html>
